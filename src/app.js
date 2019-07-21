@@ -43,6 +43,6 @@ io.on("connection", (socket) => {
     console.log(`Socket ${socket.id} has connected`);
     let topic = new Topic('daa',0);
 });
-http.listen(4444, () => {
+http.listen(process.env.PORT || 4444, () => {
     console.log("Listening on port 4444");
 });
