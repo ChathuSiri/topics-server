@@ -40,6 +40,6 @@ io.on("connection", (socket) => {
     socket.emit("topics", JSON.stringify(topicMap));
     console.log(`Socket ${socket.id} has connected`);
 });
-http.listen(4444, () => {
+http.listen(process.env.PORT || 4444, () => {
     console.log("Listening on port 4444");
 });
